@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Alien Attack - STORYSPACE</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#f5f5f5;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:22px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+
+    background:rgba(5,5,5,0.75);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+    font-size:0.95rem;
+    font-weight:500;
+    letter-spacing:3px;
+}
+
+.back-btn{
+    color:#8c8c8c;
+    text-decoration:none;
+    font-size:0.7rem;
+    letter-spacing:2px;
+    transition:0.4s;
+}
+
+.back-btn:hover{
+    color:white;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.story-hero{
+    height:75vh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 7%;
+}
+
+.story-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(5,5,5,0.4),
+    rgba(5,5,5,0.95)),
+
+    url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=1974&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    z-index:-1;
+}
+
+.story-hero-content{
+    max-width:700px;
+}
+
+.story-tag{
+    color:#9d8254;
+    letter-spacing:4px;
+    font-size:0.7rem;
+    margin-bottom:18px;
+}
+
+.story-hero h1{
+    font-size:4rem;
+    font-weight:500;
+    line-height:1;
+}
+
+.story-hero p{
+    margin-top:20px;
+    color:#a0a0a0;
+    line-height:1.9;
+    font-size:0.85rem;
+}
+
+/* =========================================
+   STORY CONTENT
+========================================= */
+
+.story-container{
+    max-width:750px;
+    margin:auto;
+    padding:100px 7%;
+}
+
+.story-container h2{
+    font-size:1.5rem;
+    margin-bottom:24px;
+    font-weight:500;
+}
+
+.story-container p{
+    color:#9a9a9a;
+    line-height:2.1;
+    font-size:0.88rem;
+    margin-bottom:28px;
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.story-quote{
+    margin:60px 0;
+    padding-left:24px;
+    border-left:1px solid rgba(255,255,255,0.15);
+}
+
+.story-quote p{
+    font-size:1rem;
+    color:#d7d7d7;
+    line-height:1.9;
+}
+
+/* =========================================
+   NEXT STORY
+========================================= */
+
+.next-story{
+    margin-top:90px;
+    padding-top:40px;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.next-story a{
+    display:inline-block;
+    margin-top:18px;
+    color:#9d8254;
+    text-decoration:none;
+    letter-spacing:2px;
+    font-size:0.72rem;
+}
+
+/* =========================================
+   REVEAL
+========================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+.story-hero h1{
+    font-size:2.6rem;
+}
+
+.story-container{
+    padding-top:70px;
+}
+
+}
+
+.story-container{
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================
+NAVBAR
+========================================= -->
+
+<nav>
+
+<div class="logo">
+STORYSPACE
+</div>
+
+<a href="../index.html" class="back-btn">
+BACK
+</a>
+
+</nav>
+
+<!-- =========================================
+HERO
+========================================= -->
+
+<section class="story-hero">
+
+<div class="story-hero-content reveal">
+
+<div class="story-tag">
+GENRES
+</div>
+
+<h1>
+STORY TITLE
+</h1>
+
+<div class="story-tag" style="margin-top: 20px;">
+A STORY BY THEWRITER
+</div>
+
+
+</div>
+
+</section>
+
+<!-- =========================================
+STORY CONTENT
+========================================= -->
+
+<div class="story-container">
+
+<div class="reveal">
+    <p>The Birth Express</p>
+
+<p>Ek Modern City, unchi unchi buildings, jaise wo aasmaan ko chhu rahi hai. Lights itni jyada ki raat ko bhi din bana de. Charo taraf luxurious cars aur logo ke chalne ki aawaz. In sab ke bich ek Train ki aawaz aati hai.</p>
+
+<p>"Jhuk Jhuk.... Jhuk Jhuk... Jhuk Jhuk..."</p>
+
+<p>Ek Train, is modern city ke bich se gujar rahi hai. Ye rasto se gadiyo aur Buildings ke aarpaar ho rahi hai. Rasto pe chalte log iski taraf dekh bhi nahi rahe. Aisa lag raha hai, wo train kisi alag hi dimension me hai.</p>
+
+<p>Train ke andar kafi bheed hai, sari ki sari seats bhari hui hai, Halaki khada koi nahi hai. Par wo Insaan nahi hai. Wo Insaan jaise dikhte hai, unki do aakhe hai, par wo halke se transparent hai. Sabka chehra mano ek jaisa lag raha hai. Train ki ek Window Seat par ek ladka, khidki se shahar ko dekh raha hai. </p>
+
+<p>Shahar me kuchh ghar, hospital aur building bilkul laal najar aa rahi hai. Baki normal. Us ladke ke saamne bhi ek ladka baitha hai wo kehta hai. "To... Kaha ki manjil hai tumhari ?" Wo pehla ladka jiska naam Amar hai kehta hai. "India... Aur Tum ?" Dusra ladka haste hue "Nepal... Hi mai Rudra." Amar hath milate hue "Mera naam Amar hai."</p>
+
+<p>Rudra Khidki se bahar shahar ko dekhte hue. "Tumhe Aisa nahi lagta ki hame America jaise kisi Samriddh desh me paida hona chahiye ?" Amar haste hue "Magar wo hamare hath me kaha." Uske hath ki ticket dikhate hue "Wo Jo baitha hai na upar... Wo jaha bolega wahi paida honge." Tabhi Train waha ek horn ke sath rukti hai.</p>
+
+<p>"Yaatrigan Kripaya Dhyan De. Ham New York Station pohoch gaye hai. Dai taraf ke darwaze khul gaye hai. Agla Station Hai Tokyo City."</p>
+
+<p>Tabhi us coach ka ek ladka kafi chillata hai. Sab use dekhne lagte hai. Wo ladka "Shukriya Bhagwan... Is baar America me paida hounga. Aur khub tarakki karunga."</p>
+
+<p>Amar Rudra ki aur dekh ke "Tum kya sochte ho ? Insaan kaha Paida hota hai uska uski life par kitna asar hota hai ?" Train ki horn bajati hai aur Train shuru ho jati hai. Rudra kehta hai "Kafi jyada... Socho tum North Korea me paida hue ho aur tumhe Internet ke bare me nahi pata, tum kisi dusre desh me nahi jaa sakte, tum khul ke jee nahi sakte."</p>
+
+<p>Amar hasta hua "Is hisaab se to ham bohot lucky hai..." Rudra ek ladke ki aur ishara karta hai "Use dekh rahe ho... Use Mila hai North Korea." Ek ladka apni seat par gardan niche jhukaye baitha hai. Amar kehta hai "Par maan bhi le ki kaha Paida honge wo hamare hath me nahi hai. Par shayad kya banenge wo to hamare hath me hoga ?" Rudra Amar se "Mai tumhe jhuti tasalli nahi dunga. Ye duniya tumse puchhe gi. Tumhe kya Banna hai ? Agar tumhe pata hai tum kya banoge to achha hai. Nahi to ye duniya tumhe batayegi tumhe kya Banna hai ?"</p>
+
+<p>Amar kehta hai "Na hamare hath me ham kaha Paida honge wo hai, Na ham jo banna chahte hai wo ban payenge. Hai na ?" Rudra "Jaruri nahi ki ham haar hi jaye. Hame ladhna hoga... Apno se, Duniya se, Apne Aap se... Tab shayad ham wo ban payenge jo hamesha se banna chahte the." Amar muskurate hue "Achha ek baat batao ? Tumhari death kaise hui thi ?" Rudra khidki se bahar Fugi Mountain ko dekhta hai. Ek pahad jo kisi ulte cone jaisa lagta hai. Jiske upar barf ki ek chadar hai.</p>
+
+<p>Rudra kehta hai "Engineering my friend. Mujhe hamesha se drawing pasand thi. Mai hamesha sochta ki Artist banunga. Par Garib ghar me paida ho gaya. Na Art ke liye samay tha aur na paise. Ghar walo ke kehne par Engineering li. Socha tha ek baar Job lag jaye... Fir to Karja chukaunga aur Art pe dhyan dunga. Par meri job ek ladki kha gayi. Kyuki wo profesor ki khas thi....... Maaf karna mai beh jata hu." Amar "Are isme mafi mangne wali kausi baat hai."</p>
+
+<p>Ek horn bajta hai aur Train Tokyo station pe rukti hai. "Yaatrigan Kripaya Dhyan De... Ham Tokyo Station Pohoch Gaye Hai. Darwaza Dai taraf se khulega. Next Station New Delhi." Train Horn bajate hue nikal padti hai. Wo coach ab mostly khali ho chuka hai.</p>
+
+<p>Rudra kehta hai "Tumne nahi bataya...? Tumhari death kaise hui ?" Amar apne pairo me dekhta hai "Mai nahi batau to chalega ?" Rudra kehta hai "Yaha tumhe koi judge nahi kar raha.." Amar kehta hai "Maine khun kiya tha... Ek ladki ka..." Rudra thoda sochta hai aur kehta hai "Khun karne ki wajah ?" Amar kehta hai "Mei behen ka R**e hua tha. Maine suna tha 3 ladko ne milke kiya. Maine ek ek karke tino ko maar diya." Rudra muskurate hue "Are... Ye to proud karne wali baat hai. Tumne sahi kiya ?"</p>
+
+<p>Amar aakho me aasu "Mujhe bhi yahi laga tha. Par jab sachhai mere saamne aai to mai sehen nahi kar paya. Darasal meri behen ka r**e kabhi hua hi nahi tha. Use ek ladka pasand tha. Us ladke ne meri behen ko reject kiya. Aur meri behen ne unpe jhuka aarop lagaya." Rudra dhimi aawaz me "Isme tumhari koi galti nahi hai..." Amar aakho me aasu aur ek smile "Mai chahta hu... Maine jin gharo ke chirag bujhaye hai. Unki kaise bhi seva kar saku. Isiliye chahta hu kisi Amir Ghar me paida hu."</p>
+
+<p>Rudra haste hue "Aur mai bhi is baar Artist hi banunga. Engineer nahi..." Train ek horn ke sath rukti hai. "Yaatrigan Kripaya Dhyan De... Ham New Delhi Station Pohoch Gaye Hai... Darwaza Dai Taraf Khulega... Agla Station Hai London" Dono khade hote hai. Amar "Chal bhai... Chalte hai. Paida hote hi ek dusre ko bhul jayenge." Rudra haste hue "Bhul to jayenge. Par dil ke kisi kone me wo ehsaas rahega ki ham kahi mile hai." Dono ek dusre ke gale milte hai. Dono Darwaze par khade hote hai. Unke saamne ki puri duniya mano sirf roshni se bani ho. Charo taraf bas white lights.</p>
+
+<p>Amar hate hue "Mai chahta hu tu ek bada Artist bane..." Rudra ek smile ke sath "Mai chahta hu tu unki seva kar paye... Jinke chirag tune bujhaye hai." Dono train ke niche pair rakhte hai. Charo taraf sab kuch safed ho jata hai. Wo ek dusre ko tak nahi dekh paa rahe. Na hi wo train unhe dikh rahi hai. Achanak Train ka horn bajta hai.</p>
+
+<p>Ek Chhota sa ghar, kafi purana aur rang utara hua, uske ek kamre me doctor apne hath me ek bachha liye hai. Waha ek aadmi aata hai aur us bachhe ko apne hath me leta hai. Doctor kehta hai "Iska koi naam socha hai ?" Wo kehta hai "Amar... Socha hai..."</p>
+
+<p>Ek Bohot bada hospital, charo taraf luxurious lights aur nurses. Ek Kamra jisme ek bed par ek chhota bachha rakha hai. Sab logo ne use gher rakha hai. Tabhi waha ek aadmi aate hai. "Mera beta... Rudra... Mera Beta.." wo use uthate hai aur bohot muskurate hai. "Rudra... Mera bachha... Papa ka naam roshan karega... Engineer Banega...."</p>
+
+<p>Tabhi wo bachha rone lagta hai. Aur waha se Train jane ki aawaz aati hai.</p>
+
+<p>"Jhuk Jhuk... Jhuk Jhuk... Jhuk Jhuk..."</p>
+
+<p>The End</p>
+
+<p>A Story by Thewriter </p>
+
+<p>A UDGAM STUDIO Production</p>
+</div>
+
+
+<div class="next-story reveal">
+
+<h2>
+Continue Reading
+</h2>
+
+<a href="#">
+NEXT CHAPTER IN PROGRESS
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+/* =========================================
+   REVEAL
+========================================= */
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealElements(){
+
+    reveals.forEach((element)=>{
+
+        const windowHeight = window.innerHeight;
+
+        const revealTop = element.getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 80){
+            element.classList.add("active");
+        }
+
+    })
+
+}
+
+document.addEventListener("contextmenu",(e)=>{
+    e.preventDefault();
+})
+
+document.addEventListener("keydown",(e)=>{
+
+    if(
+        (e.ctrlKey && e.key === "c") ||
+        (e.ctrlKey && e.key === "u") ||
+        (e.ctrlKey && e.key === "s") ||
+        (e.ctrlKey && e.key === "a")
+    ){
+
+        e.preventDefault();
+
+    }
+
+})
+
+window.addEventListener("scroll",revealElements);
+
+revealElements();
+
+</script>
+
+</body>
+</html>
+ 

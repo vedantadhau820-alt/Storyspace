@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Alien Attack - STORYSPACE</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#f5f5f5;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:22px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+
+    background:rgba(5,5,5,0.75);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+    font-size:0.95rem;
+    font-weight:500;
+    letter-spacing:3px;
+}
+
+.back-btn{
+    color:#8c8c8c;
+    text-decoration:none;
+    font-size:0.7rem;
+    letter-spacing:2px;
+    transition:0.4s;
+}
+
+.back-btn:hover{
+    color:white;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.story-hero{
+    height:75vh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 7%;
+}
+
+.story-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(5,5,5,0.4),
+    rgba(5,5,5,0.95)),
+
+    url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=1974&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    z-index:-1;
+}
+
+.story-hero-content{
+    max-width:700px;
+}
+
+.story-tag{
+    color:#9d8254;
+    letter-spacing:4px;
+    font-size:0.7rem;
+    margin-bottom:18px;
+}
+
+.story-hero h1{
+    font-size:4rem;
+    font-weight:500;
+    line-height:1;
+}
+
+.story-hero p{
+    margin-top:20px;
+    color:#a0a0a0;
+    line-height:1.9;
+    font-size:0.85rem;
+}
+
+/* =========================================
+   STORY CONTENT
+========================================= */
+
+.story-container{
+    max-width:750px;
+    margin:auto;
+    padding:100px 7%;
+}
+
+.story-container h2{
+    font-size:1.5rem;
+    margin-bottom:24px;
+    font-weight:500;
+}
+
+.story-container p{
+    color:#9a9a9a;
+    line-height:2.1;
+    font-size:0.88rem;
+    margin-bottom:28px;
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.story-quote{
+    margin:60px 0;
+    padding-left:24px;
+    border-left:1px solid rgba(255,255,255,0.15);
+}
+
+.story-quote p{
+    font-size:1rem;
+    color:#d7d7d7;
+    line-height:1.9;
+}
+
+/* =========================================
+   NEXT STORY
+========================================= */
+
+.next-story{
+    margin-top:90px;
+    padding-top:40px;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.next-story a{
+    display:inline-block;
+    margin-top:18px;
+    color:#9d8254;
+    text-decoration:none;
+    letter-spacing:2px;
+    font-size:0.72rem;
+}
+
+/* =========================================
+   REVEAL
+========================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+.story-hero h1{
+    font-size:2.6rem;
+}
+
+.story-container{
+    padding-top:70px;
+}
+
+}
+
+.story-container{
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================
+NAVBAR
+========================================= -->
+
+<nav>
+
+<div class="logo">
+STORYSPACE
+</div>
+
+<a href="../index.html" class="back-btn">
+BACK
+</a>
+
+</nav>
+
+<!-- =========================================
+HERO
+========================================= -->
+
+<section class="story-hero">
+
+<div class="story-hero-content reveal">
+
+<div class="story-tag">
+GENRES
+</div>
+
+<h1>
+STORY TITLE
+</h1>
+
+<div class="story-tag" style="margin-top: 20px;">
+A STORY BY THEWRITER
+</div>
+
+
+</div>
+
+</section>
+
+<!-- =========================================
+STORY CONTENT
+========================================= -->
+
+<div class="story-container">
+
+<div class="reveal">
+    <p>Natural Process</p>
+
+<p>Bhopal ka ek shant ilaka, jaha kai sare Ghar hai. Ek Garden hai, Jo in gharo ke bilkul bich me hai. Subah ka samay hai, chidiya chahchaha rahi hai, suraj apni roshni bikher raha hai. Mausam ekdam suhana. Charo taraf ek tazi hawa.</p>
+
+<p>"Thak Thak Thak.... Thak Thak Thak..."</p>
+
+<p>Ek ladka Suraj, kaali baniyaan aur half pant pehne, ek Darwaze ko pith raha hai. Suraj jor se kehta hai "Abe so Gaya kya andar ? Chal bhai mujhe bhi Jana hai ?" Andar se ek aawaz aati hai "Bhai bas 5 minutes..." Suraj pichhe ek kursi par baithata hai aur apna phone chalane lagta hai.</p>
+
+<p>Tabhi andar se kuchh aawaz aane lagti hai. Kisi ladki ki chikhte hue. Achanak wo aawaz band ho jati hai. Suraj aakhe badi karke "Sale... Mai yaha pressure rok ke baitha hu... Aur tu andar hila raha hai." Tabhi andar se ek dubla patla ladka bahar aata hai, usne chashma pehna hota hai, wo kafi thaka thaka lagta hai.</p>
+
+<p>Suraj haste hue "Aur beta... Kya kar rahe the aap ?" Wo dusra ladka Vinay. Vinay ka chehra utra hua hai, uske aakho ke niche kale dhabbe hai. Vinay dhimi aawaz me "Bhai... Mai kuch nahi kar raha tha." Suraj khada hota hai aur haste hue Vinay ke kande par hath rakhta hai "Beta... Maine sun li wo aawaz." Vinay eyebrows ko niche karte hue "Konsi aawaz ?" Suraj "Kyu Earphones disconnected ho gaye the kya ?" Vinay "Par mere pass to earphones hi nahi hai."</p>
+
+<p>Suraj Vinay ki aur dekh ke "Beta... Apne baap se ye sab nahi chhupate..." Vinay kursi par baithata hai "Haa yaar... hila raha tha." Suraj daat dikhate hue hasta hai "Aur... Konsi category dekhta hai ?" Vinay suraj ki aur dekh ke "Bhai mujhe ye sab karke maja nahi aa raha... (Thoda ruk ke) Matlab aata hai maja... Par tu samajh raha hai na... Mai nahi karna chahta ye sab..." Suraj "Abe kya bak raha hai ?" Vinay kehta hai "Abe lagatar 7 din se kar raha hu... Na raat ko neend aati hai aur na hi thik se bhuk lagti hai... Kamjori si hai... Mai nahi karna chahta ye sab... Par mai ise rok nahi paa raha..."</p>
+
+<p>Suraj thoda serious hokar "Beta... Ye cheez do logo se kabhi nahi chhupate... Ek Doctor aur dusra Roommate... Aaja."</p>
+
+<p>Ek chhota sa kamra, kamre me AC laga hua hai. Ek ladka ek PC par koi game khel raha hai. Us ladke ke pichhe Vinay aur Suraj bed par baithe hai. Tabhi wo ladka apne headset hatata hai aur kursi pichhe ghumata hai. Wo ladka "Aur bhai... Kya dikkat ho gayi ?" Suraj thoda hichkichate hue "Wo bhai... Darasal... Wo actually... Asal me" wo ladka chid ke "Abe bakega ya dhar du ek..." Suraj Vinay ki aur dekhta hai fir dhire se kehta hai "Bhaiya... Isko aadat lag gayi hai..." Wo ladka dhire se "Kis ki ?" Suraj ek ishara karta hai. Wo ladka jor se "Hilane ki ?" Vinay "Are bhaiya aap marwaoge... Dhire bolo yaar."</p>
+
+<p>Wo ladka "Wo sab chhod... Ye bata, kya dekhta hai ? Mia ya sunny ?" Suraj us ladke se "Bhaiya ye aap baad me puchh lena... Pehle iski problem solve karo..." Wo ladka "Tum logo ko pata hai... Tum bohot sahi bande ke paas aaye ho. Mujhe koi bhi lat chhudane ka secret pata hai." Wo ladka dono ko samjhata hai "Mujhe sutte ka bohot shock tha ji. Mai roj ek ya do sutte laga leta tha. Par mujhe isse chhutkara chahiye tha. To maine kya kiya ek sath 10 sutte laga liye. Tum manoge nahi... Uske baad ek baar bhi haath nahi lagaya Maine use." Vinay pareshani me "To aap kya chahte hai mai ek din me das baar hilau..?" </p>
+
+<p>Wo ladka "Dekh teri halat dekh ke bata raha hu... Das baar bohot jyada ho jayega. 3-4 baar kar le. Baki Internet to hai hi..." Tabhi suraj ki najar waha rakhe dustbin ke pass jati hai jaha kuchh sutte ke packets pade hai. Suraj Vinay ki aakho me dekhta hai.</p>
+
+<p>Dono apne kamre me hai, ek table par laptop rakha hai dono chairs par baithe hai. Vinay Suraj se "Bhai... Lat chhutwani hai... Jaan nahi... Kya bol raha tha wo behen ka pakoda ?" Suraj laptop pe kuchh likhte hue "Abe mujhe kya pata tha... Sala nashedi... Jarur ganja fuk ke bol raha hoga..." Vinay "Bhai mujhe na chakkar se aa rahe hai.. Jaldi kuchh kar !!"</p>
+
+<p>Suraj ek smile ke sath "Mil gaya..."</p>
+
+<p>Suraj aur Viyan dono aamne samne baithe hai. Suraj kehta hai "Dekh Pehla phase hai... Distraction. Jab bhi tujhe hilane ka Mann kare, tu mere pass aa jaiyo." Vinay "Abe kya bak raha hai ? Mai straight hu bhai." Suraj "Ohh behen ke pakode. Dhyan se sun. Dusra Phase hai... Busy Your Mind. Kuchh kaam kar, workout, book reading ya movie dekh le... Wo wali mat dekhna bas. Fir aata hai final phase Avoidance. Tu Tera phone mujhe de de." Vinay haa me sar hilata hai aur apna phone de deta hai.</p>
+
+<p>Addiction Break Day 1</p>
+
+<p>Vinay pura din Suraj ke aaspaas ghumta hai. Vinay kamjori ke karan, din me do tin Energy drink pita hai, Dono din bhar laptops me movie dekhte, sham ko cricket khelte, Vinay mushkil se daud paa raha tha aur raat ko Suraj Phone aur laptop kahi chhupake so jata. Par Vinay ko kafi der tak neend nahi aati. Wo apna phone dekhne lagta hai. Par use milta nahi. Fir wo so jata hai.</p>
+
+<p>Day 2</p>
+
+<p>Suraj aur Vinay laptop me movie dekh rahe hai. Vinay "Mai washroom hoke aata hu..." Suraj Vinay se "Ohh Mahashay... Phone leke kidhar jaa rahe hai."</p>
+
+<p> Day 3</p>
+
+<p>Viyan apni kitabo me kuchh dekhne lagta hai. Suraj dustbin ke baju me khada hai "Tu jo dhundh raha hai wo is dustbin me hai." Viyan dekhta hai dustbin me kuchh photos ke tukde hai.</p>
+
+<p> Day 4</p>
+
+<p>Dono Laptop me ek movie dekh rahe hote hai. Tabhi usme ek kissing scene aata hai. Viyan apni aakhe band kar leta hai. Suraj use dekh muskurata hai. Sham ko dono Cricket khelte hai, aur Vinay ab bohot tez daud raha hai.</p>
+
+<p>Day 5</p>
+
+<p>Vinay aur Suraj dono apne phone me game khel rahe hote hai. Suraj "Bhai yakin nahi ho raha 5 din ho gaye. Kaisa lag raha hai." Vinay game khelte hue "Bhai bohot sahi lag raha hai. Matlab full energy. Maja aa raha hai. Bas ek doubt hai ?" Suraj Vinay ki aakho me dekhta hai.</p>
+
+<p>Ek hospital cabin, doctor white kapde me apni seat par baithe hai. Unke saamne Vinay aur Suraj baithe hai.</p>
+
+<p>Suraj "Wo Doctor... Ek doubt tha. Hila... nahi. Masterbation sahi hai ya nahi ?" Doctor  hasta hai "Ye sawal tumhare mann me kyu aaya ?" Vinay "Wo doctor... Hame koi batane wala nahi hai. Kya sahi hai kya galat ? Sex Education to kya uski baat bhi nahi karte" <br>Doctor hasta hai "Chalo... Tumne puchha to sahi. Dekho ye bilkul ek natural process hai. Matlab agar week me ek do baar karo. To healthy hai. Par ise adat mat banne dena."</p>
+
+<p>Day 6...</p>
+
+<p>Raat ka samay. Suraj apne bistar par soya hai. Achanak uski aakhe khulti hai. Wo apni bottle dekhta hai, par usme Pani nahi hai. Uski najar padti hai Vinay ke bed par, Vinay waha nahi hai. Suraj bottle ko leta hai aur usme Pani bharne lagta hai. Tabhi Suraj ko bathroom se dubara kisi ladki ki aawaz aati hai. Cheekhne ki.</p>
+
+<p>Suraj jor se "Behen ke pakode... Vinay... Ye kya kar raha hai tu ? Aur tujhe phone kaise Mila ?" Vinay andar se "Bhai doctor ne bola tha hafte me ek baar chalta hai.... Natural Process..." Suraj jor se "Tu kabhi nahi sudhrega... Mujhe kya."</p>
+
+<p>The End</p>
+
+<p>A Short Story By Thewriter </p>
+
+<p>A UDGAM STUDIO Production </p>
+</div>
+
+
+<div class="next-story reveal">
+
+<h2>
+Continue Reading
+</h2>
+
+<a href="#">
+NEXT CHAPTER IN PROGRESS
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+/* =========================================
+   REVEAL
+========================================= */
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealElements(){
+
+    reveals.forEach((element)=>{
+
+        const windowHeight = window.innerHeight;
+
+        const revealTop = element.getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 80){
+            element.classList.add("active");
+        }
+
+    })
+
+}
+
+document.addEventListener("contextmenu",(e)=>{
+    e.preventDefault();
+})
+
+document.addEventListener("keydown",(e)=>{
+
+    if(
+        (e.ctrlKey && e.key === "c") ||
+        (e.ctrlKey && e.key === "u") ||
+        (e.ctrlKey && e.key === "s") ||
+        (e.ctrlKey && e.key === "a")
+    ){
+
+        e.preventDefault();
+
+    }
+
+})
+
+window.addEventListener("scroll",revealElements);
+
+revealElements();
+
+</script>
+
+</body>
+</html>
+ 
