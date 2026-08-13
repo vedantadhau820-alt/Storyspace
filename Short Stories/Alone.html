@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Alien Attack - STORYSPACE</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#f5f5f5;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:22px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+
+    background:rgba(5,5,5,0.75);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+    font-size:0.95rem;
+    font-weight:500;
+    letter-spacing:3px;
+}
+
+.back-btn{
+    color:#8c8c8c;
+    text-decoration:none;
+    font-size:0.7rem;
+    letter-spacing:2px;
+    transition:0.4s;
+}
+
+.back-btn:hover{
+    color:white;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.story-hero{
+    height:75vh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 7%;
+}
+
+.story-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(5,5,5,0.4),
+    rgba(5,5,5,0.95)),
+
+    url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=1974&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    z-index:-1;
+}
+
+.story-hero-content{
+    max-width:700px;
+}
+
+.story-tag{
+    color:#9d8254;
+    letter-spacing:4px;
+    font-size:0.7rem;
+    margin-bottom:18px;
+}
+
+.story-hero h1{
+    font-size:4rem;
+    font-weight:500;
+    line-height:1;
+}
+
+.story-hero p{
+    margin-top:20px;
+    color:#a0a0a0;
+    line-height:1.9;
+    font-size:0.85rem;
+}
+
+/* =========================================
+   STORY CONTENT
+========================================= */
+
+.story-container{
+    max-width:750px;
+    margin:auto;
+    padding:100px 7%;
+}
+
+.story-container h2{
+    font-size:1.5rem;
+    margin-bottom:24px;
+    font-weight:500;
+}
+
+.story-container p{
+    color:#9a9a9a;
+    line-height:2.1;
+    font-size:0.88rem;
+    margin-bottom:28px;
+}
+
+/* =========================================
+   QUOTE
+========================================= */
+
+.story-quote{
+    margin:60px 0;
+    padding-left:24px;
+    border-left:1px solid rgba(255,255,255,0.15);
+}
+
+.story-quote p{
+    font-size:1rem;
+    color:#d7d7d7;
+    line-height:1.9;
+}
+
+/* =========================================
+   NEXT STORY
+========================================= */
+
+.next-story{
+    margin-top:90px;
+    padding-top:40px;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.next-story a{
+    display:inline-block;
+    margin-top:18px;
+    color:#9d8254;
+    text-decoration:none;
+    letter-spacing:2px;
+    font-size:0.72rem;
+}
+
+/* =========================================
+   REVEAL
+========================================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+.story-hero h1{
+    font-size:2.6rem;
+}
+
+.story-container{
+    padding-top:70px;
+}
+
+}
+
+.story-container{
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================
+NAVBAR
+========================================= -->
+
+<nav>
+
+<div class="logo">
+STORYSPACE
+</div>
+
+<a href="../index.html" class="back-btn">
+BACK
+</a>
+
+</nav>
+
+<!-- =========================================
+HERO
+========================================= -->
+
+<section class="story-hero">
+
+<div class="story-hero-content reveal">
+
+<div class="story-tag">
+GENRES
+</div>
+
+<h1>
+STORY TITLE
+</h1>
+
+<div class="story-tag" style="margin-top: 20px;">
+A STORY BY THEWRITER
+</div>
+
+
+</div>
+
+</section>
+
+<!-- =========================================
+STORY CONTENT
+========================================= -->
+
+<div class="story-container">
+
+<div class="reveal">
+    <p>Alone</p>
+
+<p>Sham ka samay, gaon ke bahar, nadi ke kinare ek maidan hai. Jaha kai bachhe Cricket khel rahe hai. Suraj dub raha hai aur aasmaan me charo aur lali faili hui hai. Nadi ke khadkhadane ki aawaz ek adbhut shandi dila Rahi hai.</p>
+
+<p>Sab bachhe khel rahe hai. Par ek bachha nadi ke kinare par baitha unhe dekh raha hai. Ek machhawara jo nadi me jaali laga raha hai, wo puchhta hai.</p>
+
+<p>Machhawara - Oye... Ram. Tujhe nahi khelna kya ?<br>Ram - Khelna hai bhaiya... Par wo log khelne nahi dete...<br>Machhawara - Kyu ? <br>Ram - Shayad mai achha nahi khel pata... Mujh se kai baar ball chhut ke nadi me chali jati hai...<br>Machhawara - Are... Udaas mat ho... Ye sab to laga rehta hai... Aaja... Machhali pakdega...<br>Ram - Par mujhe nahi aata...<br>Machhawara - Mai sikhata hu na...</p>
+
+<p>Ram apne pant ko upar khichta hai, aur nadi me utarta hai. Machhaware ke hath me ek jaali hai.</p>
+
+<p>Machhawara (jaali dete hue) - Ise pakad aur us lakdi se bandh de...</p>
+
+<p>Ram wo jali pakadta hai aur, ek lakdi ki aur jata hai, jo nadi ke bich me hai. Jate hue uska pair fisalta hai aur wo gir jata hai.</p>
+
+<p>Machhawara - Are sambhal ke... Tumhe chot to nahi aayi...</p>
+
+<p>Ram nadi me apne aap ko sambhalte hue khada hota hai. Wo jab jaali ko dekhta hai, wo jaali fat chuki hai.</p>
+
+<p>Machhawara - Are Are... Tune to nuksan kara diya... Aaj ka pura din Khali reh jayega... Jaa yaha se...</p>
+
+<p>Ram - Maaf kijiye bhaiya...</p>
+
+<p>Machhawara - Are meri mati mari gayi thi... Tujhe kaam diya... </p>
+
+<p>Ram waha se chup chap nikal jata hai. Ram un bachho ke paas Jake baithata hai.</p>
+
+<p>Ram - Bhai log... Mujhe bhi khelne do na...</p>
+
+<p>Koi uski baat par dhyan nahi deta. Ram waha se chala jata hai.</p>
+
+<p>Ram apne ghar ke ek jagah, baitha ek ball se khel raha hota hai. </p>
+
+<p>Ram ke pita - Beta Ram... Idhar aana...<br>Ram - Ji Papa... Boliye...<br>Ram ke pita - Jara ye gehu ka katta uthane me madad kar...</p>
+
+<p>Ram katte ko uthane me madad karta hai, par galti se wo katte ke ched ko pakad leta hai. Jisse ched bada ho jata hai aur sara gehu bikhar jata hai.</p>
+
+<p>Ram ke pita (Ghusse me) - Are Are... Ye kya kar diya... Nalayak... Kisi kaam ka nahi tu gadhe...<br>Ram - Par wo galti<br>Ram ke pita - Tu Jaa yaha se... Lagta hai meri jaan leke hi manega...</p>
+
+<p>Ram waha se chup chap chala jata hai. Ram ghar ke bahar ek bike pe baitha hota hai. Raat ke aasmaan ko dekh raha hai. Ram ki maa bahar aati hai.</p>
+
+<p>Ram ki maa - Waah... Sara kaam bigad ke janab tare gin rahe hai...<br>Ram - Are mummy wo...<br>Ram ki maa - Chal andar... Wo gehu uthane me madad kar...</p>
+
+<p>Ram ki maa ghusse se andar chali jati hai. Ram bhi bina kuchh bole andar aa jata hai aur gehu uthane me madad karta hai.</p>
+
+<p>Thodi der baad Ram aur uski family jisme uski behen bhi hai, sab khana kha rahe hai.</p>
+
+<p>Ram ki maa - Wo bagal wale Amit ko dekha... Kaise gadi chalata hai... Apne pita ki khet me madad karta hai...<br>Ram ke pita - Aur ye ek nalayak... Sara din phone me ghuse rahenge... Na kisi se baat na kuchh... Aur kuch kaam kaho... To kaam kharab aur karta hai...<br>Ram ki behen - Pata hai papa... Amit bhaiya part time job bhi karte hai apni family ke liye...</p>
+
+<p>Ram ne abhi tak ek niwala nahi khaya hai. Wo khada hota hai aur bahar jane lagta hai.</p>
+
+<p>Ram ki maa - Are khana to kha le...<br>Ram ke pita - Are jane do use... Wo nahi sudharne wala...</p>
+
+<p>Ram nadi ki kinare jakar baith jata hai. Nadi ki khadkhadahat raat me kafi khaufnak lagti hai. Charo taraf bas andhera aur kido ki aawaz. Aasmaan taro se bhara hua. Nadi ke kinare thande hawake jhoke. Ram waha aakhe band karke kuchh soch raha hai.</p>
+
+<p>Ek Seesaw, upar nichhe ho raha hai. Ek taraf Ram baitha hai to dusri aur koi baitha hai. Jo dikh nahi Raha.</p>
+
+<p>Wo dusra ladka kehta hai - Ram agar mai abhi tujhe bolu... Ki tujhe duniya ki koi bhi cheez milegi... Bas tujhe mangna hoga... To tu kya mangega...</p>
+
+<p>Ram shant aur aakho me ek thehraav.</p>
+
+<p>Ram - Mai kabiliyat mangunga... Mai kisi ke kisi kaam ka nahi... </p>
+
+<p>Wo dusra ladka - Par agar tujhe iske badle apne kisi rishte ko chhodna pade to ?</p>
+
+<p>Ram - Matlab mujhe chhodna hai... Ya wo apne aap chhut jayega...</p>
+
+<p>Wo ladka - Aisa samajh... Tu apne har ek rishte ke badle kuchh nahi kabiliyat sikhega... Par teri behen tujhse baat nahi karegi ya tere papa tujhe beta nahi kahenge... Matlab tum dono ka rishta tut jayega...</p>
+
+<p>Ram - Agar Mai unke kuchh kaam aau to wo jyada sahi rahega... Wo suna hai na... A Dead Son Is Better Than A Failed Son...</p>
+
+<p>Wo ladka - Chal... Jaisi teri marji...</p>
+
+<p>Achanak Ram apni aakhe kholta hai. Wo nadi ke kinare par leta hai. Use chidiya ki aawaz sunai de Rahi hai, nadi ki khadkhadahat sunai de Rahi hai. Wo khada hota hai. Apne kapde saaf karta hai. Aur Ghar ki aur nikal jata hai. </p>
+
+<p>Ghar Pohocte hi uski maa use gale laga leti hai.</p>
+
+<p>Ram ki maa - Kaha chala gaya tha... Kitna dhundha tujhe... Maa ki baat ka koi aisa bura Manta hai...</p>
+
+<p>Ram kuchh nahi kehta. Wo bas andar chala jata hai. Tabhi Ram ko gehu dikhte hai.</p>
+
+<p>Ram - Maa ise piswane jana hai...?<br>Ram ki behen - Bol to aise raha hai jaise abhi Gadi pe leke hi Jane wala hai...</p>
+
+<p>Ram apni behen ki taraf dekhta hai. Uske upar kuchh likha hua hai. Sacrifice: Behen, Reward: Driving. Ram apni aakho ko saaf karta hai. Fir bhi wo wahi dikh raha hai.</p>
+
+<p>Flashback:<br>Ek Seesaw upar niche ho raha hai. Ek taraf Ram baitha hai. Dusri taraf kaun baitha hai dikh nahi raha.</p>
+
+<p>Present:<br>Ram ek lambi saans leta hai. Aur uski behen ke Upar ab Sacrificed likha hua hai.</p>
+
+<p>Ram gadi ki chabi nikalta hai.</p>
+
+<p>Ram ki maa - Are rehne de... Tere papa le aayenge...<br>Ram ki behen - Mat samjhao maa... Ye dhakkan hai... Ise to apna bhai bulane me sharm aati hai... Aisa lagta hai mera koi bhai hi na hota...<br>Ram ki maa - Are ye kya bol rahi ho... Pagal ho gayi ho...</p>
+
+<p>Ram wo gehu ka katta uthata hai aur gadi pe rakhta hai. Aur gadi leke nikal jata hai. Uski maa use dekhti rehti hai. Thodi der baad wo ghar aata hai.</p>
+
+<p>Ram ki maa - Waah beta ! Tune bike kab sikhi... Achha bol aaj kya banau tere liye...</p>
+
+<p>Ram ke chehre par smile aati hai.</p>
+
+<p>Sham ka samay hai, Ram nadi ke kinare khada hai. Uske dost cricket khel rahe hai aur wo machhaware ko dekh raha hai.</p>
+
+<p>Ram - Bhaiya... Mai kuch madad kar du...<br>Machhawara - Are nahi bhai... Kal nuksaan kara diya tumne...</p>
+
+<p>Ram pichhe apne dosto ko dekhta hai. Unke upar likha hai. Sacrifice: Friends, Reward: Fishing Skills. Ram halka sa muskurata hai. Un dosto ke upar likha hai Sacrificed.</p>
+
+<p>Ram nadi me utarta hai aur kal ke fate hue net ko pakadta hai. Wo usme kuchh knott lagata hai aur nadi me bichhata hai. Achanak wo net kafi hilne lagti hai. Ram use upar khichta hai aur usme kafi Machhaliya hai. Ram machhaware ki aur dekh ke smile karta hai.</p>
+
+<p>Dono nadi ke kinare baithe nadi me patthar maar rahe hai. </p>
+
+<p>Machhawara - Kal ke liye maaf kar de... Tune Aaj bohot help ki... Shukriya... Tu nahi hota to pata nahi kitna aur time lagta...<br>Ram - Achha... Kam se kam kaam to hua koi...</p>
+
+<p>Tabhi Ram ke dost unke pass aate hai.</p>
+
+<p>Machhawara - Kya hua re... Tum sab nadi me kya dekh rahe ho...<br>Ek ladka - Wo hamari ball chali gayi... Aap dhundh denge...<br>Machhawara - Waha dikh nahi raha kya... Waha pani khich leta hai... Ball to kab ka gaya hoga...<br>Ram - Mai nikal deta hu...<br>Machhawara - Tujhe tairna bhi aata hai kya ?</p>
+
+<p>Ram machhaware ke upar dekhta hai. Uske upar likha hota hai Sacrificed.</p>
+
+<p>Ram nadi ki aur dekhta hai aur usme kud jata hai. Aur thodi der baad ball leke aata hai. Wo ladko ko ball deta hai. Sare dost bina kuchh bole waha se chale jate hai. Ram machhaware ki aur dekhta hai. Machhawara bhi bina kuchh bole machhaliya leke Jane lagta hai. Ram uski aur dekhta hai.</p>
+
+<p>Uske chehre ki smile kahi kho jati hai. Wo ektak use jata hua dekhta hai. Fir apne dosto ko. Fir wo ghar chala jata hai.</p>
+
+<p>Ghar pohochte hi wo apni behen ke pass jata hai.</p>
+
+<p>Ram - Didi... Kya kar rahi ho ?</p>
+
+<p>Ram ki behen muh fer leti hai.</p>
+
+<p>Ram - Koi kaam ho to batao ?</p>
+
+<p>Wo kuchh jawab nahi deti. Tabhi Ram ke pita use aawaz lagate hai.</p>
+
+<p>Ram ke pita - Are beta... Idhar aaiyo... Ye Pump uthade mai khet me jaa raha hu...</p>
+
+<p>Ram chup chap waha jata hai. Apne pita ko dekhta hai. Unke chehre par pasina hai, unki aakhe laal hai aur kapde maile aur wo haaf rahe hai. </p>
+
+<p>Ram - Aap rehne dijiye pitaji...<br>Ram ke pita - To fir Ghar me roti kaise aayegi... Aap to kisi kaam ke hai nahi...<br>Ram - Mai chala jaunga... Aap ki jagah..<br>Ram ke pita - Pump chalana janta bhi hai...</p>
+
+<p>Ram uske Pita ke upar dekhta hai. Sacrifice: Pita, Reward: Pump Skill. Ram uske pita ki aur dekhta hai.</p>
+
+<p>Ram ke pita - Aaye bade... Mai jaunga... Are itni jaldi kaha... Tum hamari jaan leke hi maanoge... Utha de ab ye...</p>
+
+<p>Ram uske pita ke upar dekhta hai. Sacrificed.</p>
+
+<p>Ram Pump uthata hai aur bike pe baith ke jane lagta hai. Ram ki puri family use dekhne lagti hai.</p>
+
+<p>Ram ki maa - Dekho to... Hamara beta sudhar raha hai... Gadi chalata hai... Aapka kaam bhi kar raha hai...</p>
+
+<p>Ram halka sa muskurata hai.</p>
+
+<p>Ram ke pita - Are to ye konse kehne wali baat hai... Amit nahi karta kya... Ye nalayak ek din kaam kar lega to kuchh ho nahi jayega...</p>
+
+<p>Ram bike shuru karta hai aur khet jata hai. Ram pure khet me pump marta hai. Dhire dhire raat ho jati hai.</p>
+
+<p>Ram thak haar kar ghar jata hai. Ghar me maa use Pani deti hai. Wo ek jagah baith ke pani pita hai. Uski behen uske bagal se jati hai par use dekhti nahi. Pita unke phone par reels dekhte hai par bete ki taraf nahi dekte.</p>
+
+<p>Ram ki maa - Kitna kaam karta hai... Thak gaya hoga... Bol kya banau ?</p>
+
+<p>Ram halka sa muskurata hai.</p>
+
+<p>Ram ke pita - Are kuchh bhi banade... Bhuk lagi hai...</p>
+
+<p>Ram unki aur dekhta hai. Dhire dhire Raat hoti hai. Ram ghar ki chhat se aasman ko dekh raha hai. Hajaro tare aur ek Chand. Thandi hawaye.</p>
+
+<p>Ram - Lagta hai ab bhi kuchh Kami reh gayi mujh me... </p>
+
+<p>Aasmaan me ek Text aata hai Sacrifice: Everyone, Reward: Most Capable.</p>
+
+<p>Ram aasmaan me dekhta hai, aakho me halka sa pani. Aasmaan me likha hai.</p>
+
+<p>Sacrificed.</p>
+
+<p>Suraj dhire dhire aasmaan me nikalta hai. Aasmaan me ek lali chha jati hai. Ram subah uth ke maa ke pass jata hai.</p>
+
+<p>Ram - Maa kuchh kaam hai ?</p>
+
+<p>Ram ki maa baat ko sunti tak nahi. Uske pita waha aate hai.</p>
+
+<p>Ram ke pita - Achha sunti ho... Ye shirt sil do mera...</p>
+
+<p>Ram ke pita uski taraf dekhte tak nahi. Ram ki behen phone leke waha aati hai.</p>
+
+<p>Ram ki behen - Maa... Ye dekho ye kitna achha dress hai...<br>Ram ki maa - Tujhe lena hai kya... Lele...</p>
+
+<p>Ram ek jagah khada bas unhe dekh raha hai. Uski chehre ki smile ud jati hai. Wo nadi ke kinare jata hai. Uske dost bhi uske taraf nahi dekhte. Ram machhawara ki aur dekhta hai.</p>
+
+<p>Ram - Tumhe koi kaam hai ?</p>
+
+<p>Machhawara koi jawab nahi deta.</p>
+
+<p>Ram - Mai kuch madad Karu...</p>
+
+<p>Machhawara - Are jaao yahase...</p>
+
+<p>Ram ki dil ki dhadkan badhne lagti hai. Wo charo aur logo ko dekhne lagta hai. Wo shant aur aakho me udasi hai.</p>
+
+<p>Ram nadi me kudta hai aur kuchh machhaliya pakadta hai. Wo machhaware ko deta hai. Machhawara uski taraf dekhta bhi nahi aur jane lagta hai. Ram wahi haath me machhliya pakde use dekh raha hai.</p>
+
+<p>Ram uske dosto ke pass jata hai. Aur har dur jane wali ball ko wo unhe lakar deta hai. Par koi use nahi khilata aur na hi baat karta hai.</p>
+
+<p>Wo ghar jata hai. Wo kitchen me jata hai, jaha uska pura pariwar baitha hai.</p>
+
+<p>Ram - Mai chai bana du maa ?</p>
+
+<p>Koi kuchh nahi bolta... </p>
+
+<p>Ram - Papa... Koi kaam hai khet me...</p>
+
+<p>Koi sunta tak nahi...</p>
+
+<p>Ram ki behen - Papa... Ye wali dress leni hai.<br>Ram ke pita - To lelo... Jo lena hai lelo... <br>Ram ki maa - Uska rang kitna achha hai...</p>
+
+<p>Ram ek kone me khada sab ko dekh raha hai. Uske aakho se halke halke aasu tapak rahe hai. Wo bhagte hue ghar se nikalta hai aur Nadi ke kinare jata hai. Raat hone wali hai.</p>
+
+<p>Ram nadi ke kinare baithta hai aur apne aasuko rokne ki koshish karta hai. Par uske aakho se aansu nikal rahe hai. Ram wahi kinare let jata hai aur sone ki koshish karta hai. Wo rote hue siskiya lete hue so jata hai.</p>
+
+<p>Ek Seesaw, isbaar Seesaw upar niche nahi ho raha. Ek taraf Ram baitha hai, dusri taraf koi nahi.</p>
+
+<p>Ram - Kaha ho... Mujhe madad chahiye... Sab pehle jaisa karo...? </p>
+
+<p>Ram charo taraf dekhta hai koi nahi hai.</p>
+
+<p>Ram (Rote hue) - Mai to bas ye chahta tha... Ki mai unke kaam aau... Mujhe Kabhi Kabiliyat chahiye hi nahi thi... Mai bas Pyar chahta tha... Wo log mujhe pyar kare...</p>
+
+<p>Ek thandi hawa ka jhoka aata hai.</p>
+
+<p>Ram (Aasu pochhte hue) - Mujhe sirf Pyar chahiye tha... Mujhe laga mai kabil ban jaunga to sab mujhse pyar karenge... Par maine kabiliyat ke badle apne rishto ko khoya... Mujhe sab thik karna hai...</p>
+
+<p>Ram Seesaw se utarta hai.</p>
+
+<p>Ram - Mujhe sab thik karna hai....</p>
+
+<p>Waha koi nahi hai. Kisi ka koi jawab nahi aata. Achanak wo Seesaw ek baar upar se niche hoti hai. Ram use dekhta hai.</p>
+
+<p>The End.</p>
+
+<p>A Story by Thewriter.</p>
+
+<p>A UDGAM STUDIO Production.</p>
+</div>
+
+
+<div class="next-story reveal">
+
+<h2>
+Continue Reading
+</h2>
+
+<a href="#">
+NEXT CHAPTER IN PROGRESS
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+/* =========================================
+   REVEAL
+========================================= */
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealElements(){
+
+    reveals.forEach((element)=>{
+
+        const windowHeight = window.innerHeight;
+
+        const revealTop = element.getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 80){
+            element.classList.add("active");
+        }
+
+    })
+
+}
+
+document.addEventListener("contextmenu",(e)=>{
+    e.preventDefault();
+})
+
+document.addEventListener("keydown",(e)=>{
+
+    if(
+        (e.ctrlKey && e.key === "c") ||
+        (e.ctrlKey && e.key === "u") ||
+        (e.ctrlKey && e.key === "s") ||
+        (e.ctrlKey && e.key === "a")
+    ){
+
+        e.preventDefault();
+
+    }
+
+})
+
+window.addEventListener("scroll",revealElements);
+
+revealElements();
+
+</script>
+
+</body>
+</html>
+ 
